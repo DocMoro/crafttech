@@ -1,13 +1,14 @@
 #root {
-  min-height: 100vh;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-.dropPosition {
+.toolPosition {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 50%;
+
+  transform: translateX(-50%);
 
   z-index: 1;
 }
