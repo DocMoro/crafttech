@@ -5,9 +5,12 @@ import { ArrowTopRightIcon, BoxIcon, HamburgerMenuIcon, ValueIcon, VercelLogoIco
 import clsx from 'clsx'
 import { FC } from 'react'
 
+import { CIRCLE, RECT, RING } from '../../../constants/const'
+
 type ToolPanelProps = {
   className?: string
-  onClickSquare: () => void
+  // eslint-disable-next-line no-unused-vars
+  onClickSquare: (type: string) => void
   onClickPointer: () => void
 }
 
@@ -26,13 +29,13 @@ const ToolPanel: FC<ToolPanelProps> = ({ className, onClickSquare, onClickPointe
 
         <DropdownMenu.Portal>
           <DropdownMenu.Content className="DropdownMenuContent">
-            <DropdownMenu.Item className="DropdownMenuItem">
+            <DropdownMenu.Item className="DropdownMenuItem" onClick={() => onClickSquare(CIRCLE)}>
               <ValueIcon />
             </DropdownMenu.Item>
-            <DropdownMenu.Item className="DropdownMenuItem" onClick={onClickSquare}>
+            <DropdownMenu.Item className="DropdownMenuItem" onClick={() => onClickSquare(RECT)}>
               <BoxIcon />
             </DropdownMenu.Item>
-            <DropdownMenu.Item className="DropdownMenuItem">
+            <DropdownMenu.Item className="DropdownMenuItem" onClick={() => onClickSquare(RING)}>
               <VercelLogoIcon />
             </DropdownMenu.Item>
           </DropdownMenu.Content>
