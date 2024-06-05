@@ -1,15 +1,14 @@
-import './ToolPanel.css'
+import './ToolsPanel.css'
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { ArrowTopRightIcon, BoxIcon, HamburgerMenuIcon, ValueIcon, VercelLogoIcon } from '@radix-ui/react-icons'
 import clsx from 'clsx'
 import { FC } from 'react'
 
-import { CIRCLE, RECT, RING } from '../../../constants/const'
+import { CIRCLE, RECT, RING } from '../../constants/const'
 
 type ToolPanelProps = {
   className?: string
-  // eslint-disable-next-line no-unused-vars
   onClickSquare: (type: string) => void
   onClickPointer: () => void
 }
