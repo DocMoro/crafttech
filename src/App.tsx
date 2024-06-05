@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 import { CIRCLE, RECT, RING } from './constants/const'
 import { TShapes } from './constants/type'
-import ToolPanel from './vendor/components/DropdownMenu/ToolPanel'
+import ToolPanel from './vendor/components/ToolPanel/ToolPanel'
 
 const windowInnerWidth = document.documentElement.clientWidth
 const windowInnerHeight = document.documentElement.clientHeight - 1
